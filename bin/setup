@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+sudo docker run --security-opt apparmor=unconfined --restart always -p 127.0.0.1:3001:3001 -v "$PWD/data:/app/data" -d --name kuma louislam/uptime-kuma:1
