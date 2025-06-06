@@ -1,6 +1,6 @@
 services:
   kuma:
-    image: louislam/uptime-kuma:2.0.0-beta.2
+    image: louislam/uptime-kuma:2.0.0-beta.3
     volumes:
       - ./data:/app/data
     ports:
