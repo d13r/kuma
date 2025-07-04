@@ -3,3 +3,6 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 sudo docker-compose up -d
+
+sudo ln -s "$PWD/apache.conf" /etc/apache2/sites-enabled/kuma.conf
+sudo systemctl reload apache2
