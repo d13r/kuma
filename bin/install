@@ -4,5 +4,6 @@ cd "$(dirname "$0")/.."
 
 sudo docker-compose up -d
 
-sudo ln -s "$PWD/apache.conf" /etc/apache2/sites-enabled/kuma.conf
+sudo a2enmod proxy_http
+sudo ln -nsf "$PWD/apache.conf" /etc/apache2/sites-enabled/kuma.conf
 sudo systemctl reload apache2
